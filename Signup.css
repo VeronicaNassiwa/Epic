@@ -1,0 +1,17 @@
+.input{
+    background-origin: padding-box;
+    box-sizing: initial;
+    size: 30px;
+    border-style: groove;
+    border: 2px ;
+    border-radius: 5px;
+    }
+    form{
+        margin-top: 80px;
+        border-style: groove;
+        width: 309px;
+        height: initial;
+        align-self: center;
+        bottom: initial;
+        background-color: blue;
+    }
