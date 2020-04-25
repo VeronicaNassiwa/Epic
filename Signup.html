@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epic</title>
-    <script src="Signup.js"></script>
-    <link rel = "stylesheet"
-   type = "text/css"
-   href = "Signup.css" />
+    <link rel="stylesheet" href="Signup.css">
 </head>
 
         
 <body style="background-color: silver;">
     <center>
-        <form id="signupF" method="post" onsubmit="sign()" style="background-color:rgb(190, 185, 173)" >
-            <H2 style="color: red;" >EPIC MAIL APP</H2>
+            <form  id="signupF" action="#" method="POST" onsubmit="sign(); return false;" style="background-color:rgb(190, 185, 173)" >
+            <h2 style="color: red" >EPIC MAIL APP</h2>
             <p> Please signUp </p>
-            <input type="text" id="name" placeholder="First_Name"> <br></br>
-            <input type="text" placeholder="Last_Name" id="lname"><br></br>
-            <input type="text" id="emaill" placeholder="Your_Email"><br></br>
-            <input type="password" id="pasword"placeholder="password" required><br></br>
+            <input type="text" placeholder="Email" id="EmailAdd" required> <br> </br>
+            <input type="text" placeholder="First_Name" id="FistName" required> <br> </br>
+            <input type="text" placeholder="Last_Name" id="LastName" required> <br> </br>
+            <input type="password" placeholder="Passcode" id="Passwordd" required> <br> </br>
             <a href="epic.html">login</a>
-            <input type="submit" id="lgbtn">
+            <button type="submit" id="lgbtn">Signup</button>
+         
             <p id="signup_error"></p>
         </form>
+        <script src="Signup.js"></script>
     </center>
 </body>
 </html>

@@ -1,23 +1,21 @@
 function sign(){
-    let myname=document.getElementById('name').value;
-    let mylname=document.getElementById('lname').value;
-    let myemail=document.getElementById('emaill').value;
-    let mypasscode=document.getElementById('pasword').value;
+    let email_add=document.getElementById("EmailAdd").value;
+    let first_name=document.getElementById("FistName").value;
+    let last_name=document.getElementById("LastName").value;
+    let password=document.getElementById("Passwordd").value;
     
   fetch('https://epicmail-sentongo.herokuapp.com/api/v1/auth/signup',{
     method:'POST',
-    mode:'cors',
+    mode:"no-cors",
     headers: {
-      'Content-type': 'application/json; charset=UTF-8'
+      'Content-type': 'application/json'
   },
-    body: JSON.stringify({myname:document.getElementById('name').value,
-    myemail:document.getElementById('emaill').value,
-    mypasscode:document.getElementById('pasword').value,
-    mylname:document.getElementById('lname').value})
+    body: JSON.stringify({ "email_add": "EmailAdd", "first_name": "FistName", "last_name": "LastName", "password": "Passwordd"})
   })
-  .then((response)=> response.json())
+  .then((response)=>response.json())
   .then((data)=>{
     console.log(data);
   })
+  .catch(error => { console.log("error",error.massage)});
   
   }

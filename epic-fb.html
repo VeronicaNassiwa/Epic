@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic-fb</title>
+</head>
+<body>
+    <center>
+        <form action=""  id="signupform" method="POST "> 
+    <h2 style="color: red" >EPIC MAIL APP</h2>
+    <p> Please signUp </p>
+    <input type="text" placeholder="Email" id="EmailAdd" required> <br> </br>
+    <input type="text" placeholder="First_Name" id="FistName" required> <br> </br>
+    <input type="text" placeholder="Last_Name" id="LastName" required> <br> </br>
+    <input type="password" placeholder="Passcode" id="Passwordd" required> <br> </br>
+    <a href="epic.html">login</a>
+    <button type="submit" id="lgbtn">Signup</button>
+</form>
+<SCript>
+    
+    let signupform=document.getElementById("signupform");
+    
+    signupform.addEventListener('submit',function (signing){
+        signing.preventDefault();
+
+        const Formdata=new FormData(this);
+     fetch('https://epicmail-sentongo.herokuapp.com/api/v1/auth/signup',{
+         method:'POST',
+        mode:"no-cors",
+         body:FormData   
+     })
+     .then((response)=>response.json())
+  .then((data)=>{
+    console.log(data);
+  })
+  .catch(error => { console.log("error",error.massage)});
+   
+    });
+
+</SCript>
+</center>
+    
+</body>
+</html>
