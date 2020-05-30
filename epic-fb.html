@@ -33,29 +33,34 @@
     <input type="text" placeholder="First_Name" id="FistName" required> <br> </br>
     <input type="text" placeholder="Last_Name" id="LastName" required> <br> </br>
     <input type="password" placeholder="Passcode" id="Passwordd" required> <br> </br>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <a href="epic.html">login</a>
-    <button type="submit" id="lgbtn">Signup</button>
+    <button type="button" onclick="signing()" id="lgbtn">Signup</button>
 </form>
 <SCript>
     
-    let signupform=document.getElementById("signupform");
     
-    signupform.addEventListener('submit',function (signing){
-        signing.preventDefault();
+        function signing(){
+    let email_add=document.getElementById("EmailAdd").value;
+    let first_name=document.getElementById("FistName").value;
+    let last_name=document.getElementById("LastName").value;
+    let password=document.getElementById("Passwordd").value;
 
-        const Formdata=new FormData(this);
-     fetch('https://epicmail-sentongo.herokuapp.com/api/v1/auth/signup',{
-         method:'POST',
-        mode:"no-cors",
-         body:FormData   
-     })
-     .then((response)=>response.json())
-  .then((data)=>{
-    console.log(data);
-  })
-  .catch(error => { console.log("error",error.massage)});
-   
-    });
+            axios({Method:'POST',
+            url:'https://epicmail-sentongo.herokuapp.com/api/v1/auth/signup',
+            data:({ email_add: "EmailAdd",
+            first_name: "FistName", 
+            last_name: "LastName", 
+            password: "Passwordd"})
+
+           .then((res) =>{console.log(res)})
+           .catch((err)=>{console.log(err)})
+        
+        }) 
+    }
+    
+  
+    
 
 </SCript>
 </center>
