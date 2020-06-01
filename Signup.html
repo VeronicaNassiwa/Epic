@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <script src="Signup.js"></script>
     <link rel="stylesheet" href="Signup.css">
 </head>
 
-        
-<body >
+
+
+<body>
     <center>
-            <form  id="signupF" action="#" method="POST" onsubmit="sign(); return false;" >
-            <h2  >EPIC MAIL APP</h2>
-            <p>  Please signUp Bellow </p>
+        <form id="signupF" action="#" method="GET" onsubmit="sign();">
+            <h2>EPIC MAIL APP</h2>
+            <p> Please signUp Bellow </p>
             <input type="text" placeholder="Email_Address" id="EmailAdd" required> <br> </br>
             <input type="text" placeholder="First_Name" id="FistName" required> <br> </br>
             <input type="text" placeholder="Last_Name" id="LastName" required> <br> </br>
@@ -20,10 +23,11 @@
             <a href="login.html">login</a>
             <button type="submit" id="lgbtn">Signup</button>
             <p>Enjoy your stay!!</p>
-         <p id="idd"></p>
-    
+            <p id="idd"></p>
+
         </form>
-        <script src="Signup.js"></script>
+
     </center>
 </body>
+
 </html>
