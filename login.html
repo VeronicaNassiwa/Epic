@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 
 </head>
 
 <body>
     <center>
-        <form id="loginF" action="#" method="POST" onsubmit="lgin(); return false;">
+        <form id="loginF" action="#" onsubmit="lgin()">
             <H2>EPIC MAIL APP</H2>
             <p> Welcome to Epicmail</p>
-
             <input type="text" id="LNemail" placeholder="Enter your email"> <br></br>
             <input type="password" id="password1" placeholder="Enter your password"> <br></br>
-
-            <a href="Signup.html">     signup</a>
-
-
+            <a href="Signup.html"> signup</a>
             <button type="submit" id="lgbtn">Login</button>
             </br>
             <p>Enjoy your stay!!</p>
+            <p id="postig">
+            </p>
         </form>
     </center>
 </body>
