@@ -7,13 +7,13 @@ function lgin() {
 
     fetch(url, {
             method: "POST ",
-            //mode: "no-cors",
+            mode: "no-cors",
             headers: {
-                "Content - type ": "application / json "
+                "Content-type ":"application/json "
             },
             body: JSON.stringify({
-                "email_address ": email_address.value,
-                "password ": password.value,
+                "email_address ":email_address.value,
+                "password ":password.value
             })
         })
         .then((response) => response.json())
@@ -26,6 +26,6 @@ function lgin() {
             } else if (data.status === 405) {
                 document.write("Incorrect Details");
             }
-        });
+        })
 
 }
