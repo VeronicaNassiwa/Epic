@@ -12,8 +12,8 @@ function lgin() {
                 "Content - type ": "application / json "
             },
             body: JSON.stringify({
-                "email_address ": email_address.value,
-                "password ": password.value,
+                "email_address ":email_address.value,
+                "password ":gitpassword.value,
             })
         })
         .then((response) => response.json())

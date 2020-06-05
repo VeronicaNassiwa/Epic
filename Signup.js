@@ -12,7 +12,7 @@ function sign() {
                 "Content-type": "application/json"
             },
             body: JSON.stringify({
-                "email_address": email_address.value,
+                "email_address":email_address.value,
                 "first_name": first_name.value,
                 "last_name": last_name.value,
                 "password": password.value
