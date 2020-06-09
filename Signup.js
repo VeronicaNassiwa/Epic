@@ -21,10 +21,12 @@ function sign() {
         .then(data => {
 
             if (data.status === 201) {
-                document.getElementById('postig').innerHTML="You have signed up successfully";
+                document.getElementById('iddi').style.color="White";
+                document.getElementById('iddi').innerHTML="You have signed up successfully";
 
             } else if (data.status === 400) {
-                document.getElementById('postig').innerHTML="Provide correct details";
+                document.getElementById('iddi').style.color="Red";
+                document.getElementById('iddi').innerHTML="Provide correct details";
             }
 
         })
