@@ -21,13 +21,13 @@ function sign() {
         .then(data => {
 
             if (data.status === 201) {
-                document.write("You have signed in successfully");
+                document.getElementById('postig').innerHTML="You have signed up successfully";
 
-            } else if (data.status === 405) {
-                document.write("Incorrect Details");
+            } else if (data.status === 400) {
+                document.getElementById('postig').innerHTML="Provide correct details";
             }
 
-        });
+        })
 
 }
 
