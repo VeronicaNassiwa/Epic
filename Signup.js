@@ -21,7 +21,7 @@ function sign() {
         .then(data => {
 
             if (data.status === 201) {
-                document.getElementById('iddi').style.color="White";
+                document.getElementById('iddi').style.color="Green";
                 document.getElementById('iddi').innerHTML="You have signed up successfully";
 
             } else if (data.status === 400) {
